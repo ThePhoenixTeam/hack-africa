@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { ethers } from 'ethers'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
-import { Image } from 'next/image'
 import Web3Modal from 'web3modal'
 
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
@@ -91,7 +90,7 @@ export default function CreateItem() {
           onChange={e => updateFormInput({ ...formInput, description: e.target.value })}
         />
         <input
-          placeholder="Asset Price in ETH"
+          placeholder="Asset Price in Eth"
           className="mt-2 border rounded p-4"
           onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
         />
@@ -103,17 +102,9 @@ export default function CreateItem() {
         />
         {
           fileUrl && (
-
-            // <img className="rounded mt-4" width="350" src={fileUrl} />
-
-            <Image
-            className="rounded mt-4"
-            width="350" 
-            src={fileUrl}
-            />
+            <img className="rounded mt-4" width="350" src={fileUrl} />
           )
         }
-
         <button onClick={createMarket} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
           Create Digital Asset
         </button>
