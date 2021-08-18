@@ -65,6 +65,7 @@ export default function Home() {
               <div key={i} className="border shadow rounded-xl overflow-hidden">
                 <Image 
                   src={nft.image} 
+                  layout = "fill"
                 />
                 <div className="p-4">
                   <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>

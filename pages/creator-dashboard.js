@@ -62,6 +62,7 @@ export default function CreatorDashboard() {
               <div key={i} className="border shadow rounded-xl overflow-hidden">
                 <Image 
                   src={nft.image}  
+                  layout = "fill"
                   alt="picture"
                   className="rounded" 
                 />
